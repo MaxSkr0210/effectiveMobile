@@ -1,14 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { Sequelize, DataTypes } = require('sequelize');
+const { Sequelize } = require('sequelize');
 const actionRoutes = require('./routes/actionRoutes');
+const sequelize = require('./db/sequelize');
 
 const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
-
-const sequelize = new Sequelize('postgres://postgres:maxim0210@localhost:5432/actions');
 
 app.use('/actions', actionRoutes);
 
