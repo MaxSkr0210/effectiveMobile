@@ -32,6 +32,12 @@
 $ npm install
 ```
 
+## Running migration
+
+```bash
+$ npm run migration
+```
+
 ## Running the app
 
 ```bash
